@@ -316,6 +316,14 @@ document.addEventListener('DOMContentLoaded', async function() {
     // preserve ordering (React before ReactDOM before Babel before text/babel).
     const doc = new DOMParser().parseFromString(template, 'text/html');
     document.documentElement.replaceWith(doc.documentElement);
+    try {
+      document.title = 'Invictus - prodaja parfema';
+      var __ic = document.querySelector('link[rel="icon"]') || document.createElement('link');
+      __ic.setAttribute('rel','icon');
+      __ic.setAttribute('type','image/svg+xml');
+      __ic.setAttribute('href','data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCA2NCA2NCc+PHJlY3Qgd2lkdGg9JzY0JyBoZWlnaHQ9JzY0JyByeD0nMTInIGZpbGw9JyMxMDBkMGInLz48dGV4dCB4PSczMicgeT0nNDYnIGZvbnQtZmFtaWx5PSdHZW9yZ2lhLHNlcmlmJyBmb250LXNpemU9JzQwJyBmb250LXdlaWdodD0nYm9sZCcgdGV4dC1hbmNob3I9J21pZGRsZScgZmlsbD0nI2M2YTE1Yic+STwvdGV4dD48L3N2Zz4=');
+      if(!__ic.parentNode){document.head.appendChild(__ic);}
+    } catch(e){}
 
     // Resolve page-frame markers: mint this document's own blob for each
     // framed page — from local text when this is the root, otherwise by
